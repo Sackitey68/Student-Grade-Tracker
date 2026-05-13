@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Grade Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ========================================
+         Project: Student Grade Tracker
+         Author: Isaac Sackey Sackitey
+         Program: ALT School - Backend Engineering
+         Module: JavaScript Data Structures & DOM
+         Date: 17th May 2026
+         ======================================== -->
+
+    <main class="container">
+      <header class="app-header">
+        <h1>📊 Student Grade Tracker</h1>
+        <p class="subtitle">Manage student grades and track class performance</p>
+      </header>
+
+      <!-- Add Student Form -->
+      <section class="form-section">
+        <form id="studentForm" novalidate>
+          <div class="form-group">
+            <label for="studentName">Student Name <span class="required">*</span></label>
+            <input 
+              type="text" 
+              id="studentName" 
+              name="studentName" 
+              placeholder="e.g. Ama Serwaa"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="studentGrade">Grade (0-100) <span class="required">*</span></label>
+            <input 
+              type="number" 
+              id="studentGrade" 
+              name="studentGrade" 
+              placeholder="e.g. 85"
+              min="0" 
+              max="100"
+              required
+            />
+          </div>
+
+          <button type="submit" class="add-btn">➕ Add Student</button>
+        </form>
+        <small class="error-msg" id="formError"></small>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="stats-section">
+        <div class="stat-card">
+          <span class="stat-label">Total Students</span>
+          <span class="stat-value" id="totalStudents">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Average Grade</span>
+          <span class="stat-value" id="averageGrade">—</span>
+        </div>
+      </section>
+
+      <!-- Student List Section -->
+      <section class="list-section">
+        <h2>📋 Student List</h2>
+        <div id="emptyState" class="empty-state">
+          <p>No students added yet. Start by adding a student above! 👆</p>
+        </div>
+        <table id="studentTable" class="student-table hidden">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Student Name</th>
+              <th>Grade</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="studentList">
+            <!-- Students will be rendered here dynamically -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Bonus: LocalStorage Controls -->
+      <section class="bonus-section">
+        <button id="clearDataBtn" class="secondary-btn">🗑️ Clear All Data</button>
+        <small class="hint">Data is automatically saved to your browser</small>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
