@@ -1,0 +1,288 @@
+/* ========================================
+   ALT School: Student Grade Tracker Styling
+   Author: Isaac Sackey Sackitey
+   Program: ALT School - Backend Engineering   
+   Module: JavaScript Data Structures & DOM
+   Date: 17th May 2026
+   ======================================== */
+
+/* import poppins and agbalumo  and poppins font family */
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1a2a6c 0%, #2c3e50 100%);
+  min-height: 100vh;
+  padding: 20px;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+
+/* Header */
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #eee;
+}
+
+.app-header h1 {
+  font-family: "Agbalumo", sans-serif;
+  font-size: 2.2rem;
+  color: #1a2a6c;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Form Section */
+.form-section {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.required {
+  color: #e74c3c;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+}
+
+.error-msg {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: block;
+  text-align: center;
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  flex: 1;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.3rem;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* Table Section */
+.list-section h2 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 1.4rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.student-table th {
+  background: #2c3e50;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.student-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.student-table tr:last-child td {
+  border-bottom: none;
+}
+
+.student-table tr:hover {
+  background: #f8f9fa;
+}
+
+/* Bonus: Above Average Highlighting */
+.student-table tr.above-average {
+  background: #d4edda;
+  border-left: 4px solid #28a745;
+}
+
+.student-table tr.above-average:hover {
+  background: #c3e6cb;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.status-above {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status-below {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #c0392b;
+}
+
+
+.bonus-section {
+  margin-top: 2rem;
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.secondary-btn {
+  background: #95a5a6;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.secondary-btn:hover {
+  background: #7f8c8d;
+}
+
+.hint {
+  display: block;
+  margin-top: 0.5rem;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* Utility Classes */
+.hidden {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .stats-section {
+    flex-direction: column;
+  }
+
+  .student-table {
+    font-size: 0.9rem;
+  }
+
+  .student-table th,
+  .student-table td {
+    padding: 0.8rem 0.5rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+}
