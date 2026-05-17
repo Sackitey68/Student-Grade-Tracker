@@ -23,7 +23,7 @@ A dynamic web application for managing student grades. Built with vanilla JavaSc
 ## 🚀 How to View
 1. Clone or download the repository
 2. Open `index.html` in any modern web browser
-3. View live via GitHub Pages: `to be updated on netlify`
+3. View live via netlify: `https://student-grade-trackerr.netlify.app/`
 
 ## ✅ Assignment Requirements Met
 
